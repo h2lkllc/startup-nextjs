@@ -10,6 +10,7 @@ on:
 jobs:
   testingenv:
     runs-on: 'ubuntu-latest'
+    environment: test
     name: testing
     steps:
       - uses: actions/checkout@v3
