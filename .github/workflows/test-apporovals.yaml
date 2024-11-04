@@ -16,7 +16,7 @@ jobs:
       - name: Install Helm
         uses: azure/setup-helm@v3
         with:
-          environment: dev
+          environment: test
           image_tag: ${{ github.sha }}
           secrets: inherit
               
