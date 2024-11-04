@@ -1,0 +1,17 @@
+name: 'testing approvals'
+
+on:
+    workflow_dispatch:
+    push:
+        branches:
+            - main
+
+
+jobs:
+    testingenv:
+        uses: ./.github/workflows/deploy-kube.yaml
+        with:
+            environment: dev
+            image_tag: ${{ github.sha }}
+        secrets: inherit
+              
